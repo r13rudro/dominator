@@ -1,12 +1,12 @@
 #include<stdio.h>
 #include<string.h>
 #include<ctype.h>
-#define print "lekh"
-#define var_in "dhuk"
-#define scan "dhukbe"
-#define var_out "bero"
+#define print   "print"
+#define var_in  "varin"
+#define scan    "scan"
+#define var_out "varout"
 #define if_else "jodi"
-#define loop "loop"
+#define loop    "loop"
 FILE *f;
 int isLoop=0;
 char var[100][100];int in=-1;

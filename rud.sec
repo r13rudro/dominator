@@ -2,7 +2,6 @@ lekh "addd lekh"
 dhuk ton 33
 bero ton 
 
-jodi ton>7
-lekh "tmi ",lekh "boro",,lekh "chuto";
+jodi ton>7, lekh "tmi ",lekh "boro",,lekh "chuto";
 lekh "ses"
 loop 4 lekh "ami"
