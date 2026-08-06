@@ -1,3 +1,4 @@
-loop 3
-    print "ami "
-    print "tumay",
+scan num
+jodi num%2=0
+    lekh "even",
+    lekh "odd".
