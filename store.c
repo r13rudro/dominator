@@ -29,10 +29,7 @@ int line_in(char *line, char last, FILE *source)
   {
     int c = fgetc(source);
     if (c == -1)
-    {
       break;
-      // i = 3;
-    }
     line[i] = c;
     i++;
   } while (line[i - 1] != last);
@@ -94,16 +91,16 @@ int math(int index, char *line, int *i)
   switch (op)
   {
   case '+':
-    ans = 1;
+    ans = val[index] + n;
     break;
   case '-':
-    ans = 1;
+    ans = val[index] - n;
     break;
   case '*':
-    ans = 1;
+    ans = val[index] * n;
     break;
   case '/':
-    ans = 1;
+    ans = val[index] / n;
     break;
   case '%':
     ans = val[index] % n;
@@ -314,19 +311,14 @@ void lexer(char line[], int i)
       isLoop = 1;
       line_in(line, '.', f);
       multiLine(line, '.', c);
-      // for (int o = 0; o < 66; o++)
-      // {
-      //   /* code */
-      //   printf("%c",line[o]);
-      // }
-      // printf("\n");
       isLoop = 0;
     }
     else
     {
       skip(line, &i);
       condition(line, &i);
-      while (condition(condi, &i))
+      int y=0;
+      while (condition(condi, &y))
       {
         line_in(line, '.', f);
         multiLine(line, '.', 1);
