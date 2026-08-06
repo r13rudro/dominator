@@ -317,7 +317,7 @@ void lexer(char line[], int i)
     {
       skip(line, &i);
       condition(line, &i);
-      int y=0;
+      int y = 0;
       while (condition(condi, &y))
       {
         line_in(line, '.', f);
@@ -337,14 +337,15 @@ void lexer(char line[], int i)
   // }
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-  f = fopen("rud.sec", "r");
+  if (argc < 2)
+    printf("NO FILE SELECTED");
+  f = fopen(argv[1], "r");
   char line[10240];
   // while(fgets(line,1024,f)){
   //   lexer(line,0);
   // }
-
   while (line_in(line, '\n', f))
   {
     lexer(line, 0);
